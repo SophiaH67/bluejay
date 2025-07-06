@@ -601,7 +601,7 @@ arming_begin:
     mov  Startup_Stall_Cnt, #0          ; Reset stall count
 
     clr  IE_EA
-    call beep_f1_short                  ; Confirm RC pulse detection by beeping
+    ;call beep_f1_short                  ; Confirm RC pulse detection by beeping
     setb IE_EA
 
 ; Make sure RC pulse has been zero for ~300ms
@@ -612,7 +612,7 @@ arming_wait:
     jc   arming_wait
 
     clr  IE_EA
-    call beep_f2_short                  ; Confirm arm state by beeping
+    ;call beep_f2_short                  ; Confirm arm state by beeping
     setb IE_EA
 
 ; Armed and waiting for power on (RC pulse > 0)
